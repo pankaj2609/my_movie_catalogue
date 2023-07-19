@@ -2,7 +2,7 @@
 
 var movie_clicked = localStorage.getItem("movie_name");
 
-var url = "http://www.omdbapi.com/?t="+ movie_clicked +"&apikey=2761aa58";
+var url = "https://www.omdbapi.com/?t="+ movie_clicked +"&apikey=2761aa58";
 
 var p = fetch(url)
 
