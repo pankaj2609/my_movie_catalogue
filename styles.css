@@ -13,7 +13,7 @@ body{
 .navbar-container{
     display: flex;
     align-items: center;
-    background-color: grey;
+    background-color: black;
     color: white;
     height: 100%;
     /* padding-left: 10vw; */
@@ -21,6 +21,9 @@ body{
 .logo-container{
     flex:2;
     margin-left: 6vw;
+    font-weight: 700;
+    font-size: xx-large;
+    color:rgb(149, 22, 234);
 }
 .menu-container{
     flex:6;
@@ -31,32 +34,44 @@ body{
 }
 .menu-list-item{
     margin-right: 1rem;
-    font-size: x-small;
+    font-size: large;
 
 }
 .portfolio-container{
     flex:2;
     display: flex;
     align-items: center;
+    justify-content: space-around;
 }
 .profile-picture{
-    height: 28px;
-    width: 28px;
+    height: 40px;
+    width: 40px;
     border-radius: 50%;
 }
 .profile-text-container{
-    font-size: x-small;
+    font-size: medium;
 }
 .toggle{
     width:2rem;
-    height: 1rem;
-    border-radius: 30%;
-    background-color: white;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: rgba(152, 28, 235, 0);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+}
+
+.sun{
+    position: absolute;
+}
+.moon{
+    opacity: 0;
 }
 .sidebar{
     width: 5vw;
     height: 100vh;
-    background: blueviolet;
+    background: black;
     position: fixed;
     top:0;
     display: flex;
@@ -65,7 +80,8 @@ body{
     justify-content:space-evenly;
 }
 .sidebar-icons{
- 
+    color: white;
+    cursor: pointer;
 }
 .container{
     margin-left: 5vw;
@@ -77,15 +93,25 @@ body{
     width:100%;
     height:10rem;
 }
-.featured-content{
+.featured-content1{
 
     background-image: 
-    linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0)),url('./images/IMG_20230528_133325.jpg');
+    linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0)),url('./images/featured_1.jpg');
     
     height: 60vh;
     width: 100%;
     padding-top: 10vh;
 }
+.featured-content2{
+
+    background-image: 
+    linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0)),url('./images/featured_2.jpg');
+    
+    height: 60vh;
+    width: 100%;
+    padding-top: 10vh;
+}
+
 .featured-description{
     height: 40%;
     width: 30%;
@@ -94,7 +120,7 @@ body{
     /* margin-top: 10%; */
 }
 .featured-button {
-    background-color: #6800a0;
+    background-color:rgb(149, 22, 234);
     color: white;
     padding: 10px 20px;
     border-radius: 10px;
@@ -103,7 +129,10 @@ body{
     font-weight: bold;
     cursor: pointer;
   }
-
+.movie-list-wrapper{
+    position: relative;
+    overflow: hidden;
+}
 .movie-list-container {
 padding: 0 20px;
 background-color: black;
@@ -143,7 +172,7 @@ border-radius: 20px;
 }
 
 .movie-list-item-title {
-background-color: #333;
+background-color: #747474;
 padding: 0 10px;
 font-size: 32px;
 font-weight: bold;
@@ -155,7 +184,7 @@ transition: 1s all ease-in-out;
 }
 
 .movie-list-item-desc{
-background-color: #333;
+background-color: #747474;
 padding: 10px;
 font-size: 14px;
 position: absolute;
@@ -168,7 +197,7 @@ transition: 1s all ease-in-out;
 
 .movie-list-item-button {
 padding: 10px;
-background-color:#6800a0;
+background-color:rgb(149, 22, 234);
 color: white;
 border-radius: 10px;
 outline: none;
@@ -180,7 +209,51 @@ left: 50px;
 opacity: 0;
 transition: 1s all ease-in-out;
 }
-  
-/* .movie-list-wrapper{
-    background-color: black;
-} */
+
+.arrow {
+    font-size: 5rem;
+    position: absolute;
+    top: 30%;
+    right: 0;
+    color: gray;
+    /* opacity: 0.5; */
+    cursor: pointer;
+}
+
+
+.navbar-container.day{
+    background-color: white;
+    color: black;
+}
+.sidebar.day{
+    background-color: white;
+}
+.sidebar-icons.day{
+    color: black;
+}
+.container.day{
+    background-color: white;
+}
+.movie-list-title.day{
+    color:black;
+}
+
+.featured-content1.day{
+    background-image: 
+    linear-gradient(180deg, rgba(0,0,0,0), rgb(255, 255, 255)),url('./images/featured_1.jpg');
+}
+.featured-content2.day{
+    background-image: 
+    linear-gradient(180deg, rgba(0,0,0,0), rgb(255, 255, 255)),url('./images/featured_2.jpg');
+}
+
+.movie-list-container.day{
+    background-color: white;
+}
+.moon.day{
+    opacity: 1;
+    color: black;
+}
+.sun.day{
+    opacity: 0;
+}
