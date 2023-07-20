@@ -18,15 +18,46 @@ p.then((data)=>{
     //     movie_data.Language,
     //     movie_data.Released,
     //     movie_data.Runtime)
+    console.log(value2)
         var text_data = 
     `<ul>
         <li>${value2.Genre}</li>
         <li>${value2.Language}</li>
         <li>${value2.Released}</li>
         <li>${value2.Runtime}</li>
+        <li>${value2.Writer}</li>
+        <li>${value2.imdbRating}</li>
+        <li>${value2.Genre}</li>
+        <li>${value2.Language}</li>
+        <li>${value2.Released}</li>
+        <li>${value2.Runtime}</li>
+        <li>${value2.Writer}</li>
+        <li>${value2.imdbRating}</li>
+        <li>${value2.Genre}</li>
+        <li>${value2.Language}</li>
+        <li>${value2.Released}</li>
+        <li>${value2.Runtime}</li>
+        <li>${value2.Writer}</li>
+        <li>${value2.imdbRating}</li>
+        <li>${value2.Genre}</li>
+        <li>${value2.Language}</li>
+        <li>${value2.Released}</li>
+        <li>${value2.Runtime}</li>
+        <li>${value2.Writer}</li>
+        <li>${value2.imdbRating}</li>
     </ul>`
+    
+    var image_data = `<img src=${value2.Poster} height="500" width="300"></img>`
+        
+    var movie_title = `<h1>${value2.Title}</h1>` 
+    var bg_img = `linear-gradient(90deg, rgba(255, 255, 255), rgb(0,0,0,0), rgba(255, 255, 255)),url('${value2.Poster}')`
 
-    document.querySelector(".text-details").insertAdjacentHTML("beforeend",text_data);
+    document.querySelector(".text-details").innerHTML = text_data;
+    document.querySelector(".visual-details").innerHTML = image_data;
+    document.querySelector(".movie-title").innerHTML = movie_title;
+    document.querySelector(".outer-container").style.backgroundImage = bg_img;
+    
+
 })
 // console.log(movie_data) // using it here, it does not work, why????
 
